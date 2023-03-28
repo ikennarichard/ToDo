@@ -1,3 +1,5 @@
+import './style.css';
+
 const list = document.querySelector('.list');
 
 const todoTasks = [
