@@ -19,5 +19,18 @@ const todoTasks = [
 ];
 
 
-const sortedTasks = todoTasks.sort((a,b) => a.index - b.index)
-list.innerHTML = sortedTasks.map((item) => `<li>${item.description}</li>`).join('');
+const sortedTasks = todoTasks.sort((a,b) => a.index - b.index);
+
+const listStructure = 
+  sortedTasks.map((item) => {
+    return (
+      `<li class='list_item' id=${item.index}>
+      <input type='checkbox' class='check_item'>
+      <span class='description'>${item.description}</span>
+      <i>icon</i>
+      </li>`
+    );
+  })
+
+list.innerHTML = listStructure.join('')
+
