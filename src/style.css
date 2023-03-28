@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* list text color */
+    --dark-silver: #707070;
+    /* clear button background */
+    --cultured: #f6f6f6;
+    /* placeholder text */
+    --gainsboro: #dadada;
+    
+    --darkboro: #b5b5b5;
+    /* list text color*/
+    --daveys-gray: #5e5e5e;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--gainsboro)
+}
+
+main {
+  background-color: white;
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  color: var(--daveys-gray);
+  font-size: 1.1em;
+}
+
+.top_container, .list_item, form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top_container {
+  padding: 0.6em;
+}
+
+form {
+  position: relative;
+}
+
+.list_input, .list_item {
+  padding: 0.6em;
+  width: 100%;
+  border: 1px solid var(--gainsboro);
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.list_input {
+  padding: 1em;
+}
+
+.list_input::placeholder {
+  font-style: italic;
+  font-weight: 500;
+}
+
+.list_item {
+  color: var(--daveys-gray);
+  border-top: none;
+  cursor: pointer;
+}
+
+.add_task {
+  position: absolute;
+  bottom: 0.6em;
+  right: 0.6em;
+}
+
+.clear_completed {
+  width: 100%;
+  appearance: none;
+  border: none;
+  display: block;
+  padding: 0.5em;
+  background-color: var(--cultured);
+  height: 40px;
+  color: var(--darkboro);
+  font-weight: 600;
+}
