@@ -49,6 +49,18 @@ h1 {
   padding: 0.6em;
 }
 
+i {
+  cursor: pointer;
+}
+
+.fa-rotate, .fa-ellipsis-vertical {
+  color: var(--darkboro);
+}
+
+.fa-arrow-turn-down {
+  color: var(--gainsboro);
+}
+
 form {
   position: relative;
 }
@@ -93,4 +105,5 @@ form {
   height: 40px;
   color: var(--darkboro);
   font-weight: 600;
+  cursor: pointer;
 }

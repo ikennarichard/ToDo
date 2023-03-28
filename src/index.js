@@ -29,7 +29,7 @@ const listStructure =
       `<li class='list_item' id=${item.index}>
       <input type='checkbox' class='check_item'>
       <span class='description'>${item.description}</span>
-      <i>icon</i>
+      <i class="fa-solid fa-ellipsis-vertical"></i>
       </li>`
     );
   })
