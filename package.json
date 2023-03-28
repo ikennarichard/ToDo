@@ -2,23 +2,28 @@
   "name": "todo",
   "version": "1.0.0",
   "description": "This project is a web page that list To Do tasks.. Built using HTML, CSS, JavaScript and webpack.",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ikennarichard/ToDo.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Richard",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ikennarichard/ToDo/issues"
   },
   "homepage": "https://github.com/ikennarichard/ToDo#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.76.3",
-    "webpack-cli": "^5.0.1"
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.1"
   }
 }
