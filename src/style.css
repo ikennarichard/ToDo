@@ -53,6 +53,10 @@ i {
   cursor: pointer;
 }
 
+i:hover {
+  color: var(--daveys-gray);
+}
+
 .fa-rotate, .fa-ellipsis-vertical {
   color: var(--darkboro);
 }
@@ -87,6 +91,10 @@ form {
   color: var(--daveys-gray);
   border-top: none;
   cursor: pointer;
+}
+
+.list_item input[type='checkbox'] {
+  border: 5px solid red;
 }
 
 .add_task {
