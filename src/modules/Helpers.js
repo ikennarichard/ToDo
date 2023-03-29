@@ -1,15 +1,61 @@
-import todoTasks from './todoTasks.js';
+/* eslint-disable class-methods-use-this */
+import Task from './Task.js';
 
-const sortedTasks = todoTasks.sort((a, b) => a.index - b.index);
+export default class Helpers {
+  constructor() {
+    this.taskList = [];
+  }
 
-const setList = sortedTasks.map((task) => (
-  `<li class='list_item'>
+  addTask(index, value) {
+    if (value === '') return;
+    const newTask = new Task(index, value);
+    this.addToTaskList(newTask);
+    this.sortTasks();
+    this.displayList();
+  }
+
+  addToTaskList(task) {
+    this.taskList.push(task);
+  }
+
+  displayList() {
+    document.querySelector('.list').style.display = 'block';
+
+    if (this.taskList.length === 0) {
+      document.querySelector('.list').style.display = 'none';
+    }
+    document.querySelector('.list').innerHTML = `
+    ${this.setListItems(this.taskList)}
+    `;
+  }
+
+  removeTask(i) {
+    this.taskList = this.taskList.filter((item) => item.index !== i);
+    this.taskList.forEach((item, i) => {
+      item.index = i + 1;
+    });
+    this.sortTasks();
+    this.displayList();
+  }
+
+  setListItems(arr) {
+    let listItems = '';
+    for (let i = 0; i < arr.length; i += 1) {
+      listItems += `
+      <li class='list_item'>
       <div>
-        <input type='checkbox' class='check_item' data-id=${task.index}>
-        <span class='description'>${task.description}</span>
+        <input type='checkbox' class='check_item' data-id=${arr[i].index}>
+        <span class='description'>${arr[i].description}</span>
       </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
-      </li>`
-)).join('');
+      <i class="fa-solid fa-trash-can" id=${arr[i].index}></i>
+      </li>
+      `;
+    }
+    return listItems;
+  }
 
-export default setList;
+  sortTasks() {
+    this.taskList.sort((a, b) => a.index - b.index);
+  }
+}
