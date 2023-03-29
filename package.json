@@ -1,7 +1,7 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "This project is a web page that list To Do tasks.. Built using HTML, CSS, JavaScript and webpack.",
+  "description": "This project is a web page that list To Do tasks",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
