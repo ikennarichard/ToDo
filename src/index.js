@@ -16,7 +16,7 @@ const todoTasks = [
   {
     index: 2,
     completed: false,
-    description: 'Exercise'
+    description: 'Complete ToDo list project'
   },
 ];
 
@@ -27,8 +27,10 @@ const listStructure =
   sortedTasks.map((item) => {
     return (
       `<li class='list_item' id=${item.index}>
-      <input type='checkbox' class='check_item'>
-      <span class='description'>${item.description}</span>
+      <div>
+        <input type='checkbox' class='check_item'>
+        <span class='description'>${item.description}</span>
+      </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
       </li>`
     );

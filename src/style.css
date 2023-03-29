@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +7,10 @@
 }
 
 :root {
-  /* list text color */
     --dark-silver: #707070;
-    /* clear button background */
     --cultured: #f6f6f6;
-    /* placeholder text */
     --gainsboro: #dadada;
-    
     --darkboro: #b5b5b5;
-    /* list text color*/
     --daveys-gray: #5e5e5e;
 }
 
@@ -21,7 +18,8 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background-color: var(--gainsboro)
+  background-color: var(--gainsboro);
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -61,8 +59,13 @@ i:hover {
   color: var(--darkboro);
 }
 
+.fa-ellipsis-vertical:hover {
+  cursor: move;
+}
+
 .fa-arrow-turn-down {
   color: var(--gainsboro);
+  font-size: 0.8em;
 }
 
 form {
@@ -85,6 +88,7 @@ form {
 .list_input::placeholder {
   font-style: italic;
   font-weight: 500;
+  font-size: 1.1em;
 }
 
 .list_item {
@@ -97,9 +101,14 @@ form {
   border: 5px solid red;
 }
 
+.description {
+  margin-inline-start: 0.4em;
+  font-size: 0.9em;
+}
+
 .add_task {
   position: absolute;
-  bottom: 0.6em;
+  bottom: 0.9em;
   right: 0.6em;
 }
 
