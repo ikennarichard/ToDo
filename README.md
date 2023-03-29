@@ -70,8 +70,6 @@ This project is a web page that lets user list To Do tasks. Built using HTML, CS
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
-
 - **Homepage**
 - **Todo Tasks section**
 
@@ -97,7 +95,8 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-You need a VS code text editor.
+- You need a VS code text editor.
+- [Node](https://nodejs.org/en/download)
 
 ### Setup
 
@@ -112,6 +111,7 @@ Clone this repository to your desired folder:
 ### Install
 
 Install this project with:
+
 
 ```sh
   cd my-project

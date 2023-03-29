@@ -7,11 +7,11 @@
 }
 
 :root {
-    --dark-silver: #707070;
-    --cultured: #f6f6f6;
-    --gainsboro: #dadada;
-    --darkboro: #b5b5b5;
-    --daveys-gray: #5e5e5e;
+  --dark-silver: #707070;
+  --cultured: #f6f6f6;
+  --gainsboro: #dadada;
+  --darkboro: #b5b5b5;
+  --daveys-gray: #5e5e5e;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 main {
   background-color: white;
   width: 400px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
 ul {
@@ -37,7 +37,9 @@ h1 {
   font-size: 1.1em;
 }
 
-.top_container, .list_item, form {
+.top_container,
+.list_item,
+form {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +57,8 @@ i:hover {
   color: var(--daveys-gray);
 }
 
-.fa-rotate, .fa-ellipsis-vertical {
+.fa-rotate,
+.fa-ellipsis-vertical {
   color: var(--darkboro);
 }
 
@@ -72,7 +75,8 @@ form {
   position: relative;
 }
 
-.list_input, .list_item {
+.list_input,
+.list_item {
   padding: 0.6em;
   width: 100%;
   border: 1px solid var(--gainsboro);
