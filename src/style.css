@@ -66,6 +66,18 @@ i:hover {
   cursor: move;
 }
 
+.fa-trash-can {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.fa-trash-can:hover {
+  color: tomato;
+}
+
 .fa-arrow-turn-down {
   color: var(--gainsboro);
   font-size: 0.8em;
