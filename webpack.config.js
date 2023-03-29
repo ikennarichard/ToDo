@@ -9,7 +9,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Todays To Do',
       template: './src/index.html',
     }),
   ],
