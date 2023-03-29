@@ -33,7 +33,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 ToDo List <a name="about-project"></a>
 
 This project is a web page that lets user list To Do tasks. Built using HTML, CSS, JavaScript and webpack.
 
@@ -72,6 +72,8 @@ This project is a web page that lets user list To Do tasks. Built using HTML, CS
 
 - **Homepage**
 - **Todo Tasks section**
+- **Add and Remove Tasks**
+- **Manage tasks with local storage**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,9 +81,7 @@ This project is a web page that lets user list To Do tasks. Built using HTML, CS
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+Not Available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,8 +164,7 @@ Not Available
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Add and Remove Task**
-- **Manage task with localStorage**
+- **Update user interface to make be more interactive**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

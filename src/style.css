@@ -66,6 +66,19 @@ i:hover {
   cursor: move;
 }
 
+.fa-trash-can {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.fa-trash-can:hover {
+  color: tomato;
+  cursor: pointer;
+}
+
 .fa-arrow-turn-down {
   color: var(--gainsboro);
   font-size: 0.8em;
@@ -73,6 +86,12 @@ i:hover {
 
 form {
   position: relative;
+}
+
+form button {
+  appearance: none;
+  background: none;
+  border: none;
 }
 
 .list_input,
@@ -98,11 +117,6 @@ form {
 .list_item {
   color: var(--daveys-gray);
   border-top: none;
-  cursor: pointer;
-}
-
-.list_item input[type='checkbox'] {
-  border: 5px solid red;
 }
 
 .description {
