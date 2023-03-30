@@ -8,6 +8,7 @@ const utils = new Interactions();
 const list = document.querySelector('.list');
 const form = document.querySelector('form');
 const inputField = document.querySelector('.list_input');
+const clearBtn = document.querySelector('.clear_completed');
 
 function clearInputs() {
   inputField.value = '';
@@ -55,6 +56,14 @@ list.addEventListener('change', (e) => {
     task.sortTasks();
     task.updateStorage();
   }
+});
+
+clearBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  task.taskList = utils.clearCompleted(task.taskList);
+  task.sortTasks();
+  task.updateStorage();
+  task.displayList();
 });
 
 window.addEventListener('DOMContentLoaded', () => utils.checkCompleted(task.taskList));
