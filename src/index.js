@@ -36,7 +36,7 @@ list.addEventListener('click', (e) => {
     utils.checkCompleted(task.taskList);
   }
 
-  if (description) {
+  if (description && !description.classList.contains('blur_text')) {
     task.editTask(description);
   }
 });
@@ -45,6 +45,7 @@ list.addEventListener('focusout', (e) => {
   const description = e.target.closest('.description');
   if (description) {
     task.displayEditedTask(description, Number(description.dataset.id));
+    task.displayList();
   }
 });
 

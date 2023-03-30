@@ -4,10 +4,8 @@ export default class Interactives {
     taskList.forEach((task) => {
       if (task.index === id && elem.checked === true) {
         task.completed = true;
-        elem.dataset.id = 'true';
       } else if (task.index === id && elem.checked === false) {
         task.completed = false;
-        elem.dataset.id = 'false';
       }
     });
   }
