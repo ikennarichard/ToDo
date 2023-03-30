@@ -81,9 +81,7 @@ This project is a web page that lets user list To Do tasks. Built using HTML, CS
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+Not Available
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
