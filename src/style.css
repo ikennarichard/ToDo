@@ -88,6 +88,12 @@ form {
   position: relative;
 }
 
+form button {
+  appearance: none;
+  background: none;
+  border: none;
+}
+
 .list_input,
 .list_item {
   padding: 0.6em;
