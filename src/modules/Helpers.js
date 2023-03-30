@@ -3,7 +3,7 @@ import Task from './Task.js';
 
 export default class Helpers {
   constructor() {
-    this.taskList = [];
+    this.taskList = JSON.parse(localStorage.getItem('tasks')) || [];
   }
 
   addTask(index, value) {
@@ -11,6 +11,7 @@ export default class Helpers {
     const newTask = new Task(index, value);
     this.addToTaskList(newTask);
     this.sortTasks();
+    this.updateStorage();
     this.displayList();
   }
 
@@ -35,6 +36,7 @@ export default class Helpers {
       item.index = i + 1;
     });
     this.sortTasks();
+    this.updateStorage();
     this.displayList();
   }
 
@@ -68,5 +70,11 @@ export default class Helpers {
     elem.setAttribute('contenteditable', 'false');
     const objIndex = this.taskList.findIndex((obj) => obj.index === index);
     this.taskList[objIndex].description = elem.innerText;
+    this.sortTasks();
+    this.updateStorage();
+  }
+
+  updateStorage() {
+    localStorage.setItem('tasks', JSON.stringify(this.taskList));
   }
 }
