@@ -76,6 +76,7 @@ i:hover {
 
 .fa-trash-can:hover {
   color: tomato;
+  cursor: pointer;
 }
 
 .fa-arrow-turn-down {
@@ -110,11 +111,6 @@ form {
 .list_item {
   color: var(--daveys-gray);
   border-top: none;
-  cursor: pointer;
-}
-
-.list_item input[type='checkbox'] {
-  border: 5px solid red;
 }
 
 .description {
