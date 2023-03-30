@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-export default class Interactions {
+export default class Interactives {
   toggleCompleted(id, taskList, elem) {
     taskList.forEach((task) => {
       if (task.index === id && elem.checked === true) {

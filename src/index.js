@@ -1,9 +1,9 @@
 import Helpers from './modules/Helpers.js';
-import Interactions from './modules/Interactives.js';
+import Interactives from './modules/Interactives.js';
 import './style.css';
 
 const task = new Helpers();
-const utils = new Interactions();
+const utils = new Interactives();
 
 const list = document.querySelector('.list');
 const form = document.querySelector('form');
