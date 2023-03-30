@@ -26,6 +26,7 @@ list.addEventListener('click', (e) => {
     target.nextElementSibling.classList.toggle('show');
     target.style.display = 'none';
   }
+
   if (trash) {
     task.removeTask(Number(trash.id));
   }
