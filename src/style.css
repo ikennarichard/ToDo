@@ -142,7 +142,7 @@ form button {
   font-weight: 600;
   cursor: pointer;
   transition: background-color, color, 0.2s ease-in;
-} 
+}
 
 .clear_completed:hover {
   background-color: var(--daveys-gray);
@@ -151,5 +151,5 @@ form button {
 
 .blur_text {
   color: transparent;
-  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
