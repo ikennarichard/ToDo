@@ -1,7 +1,9 @@
 import Helpers from './modules/Helpers.js';
+import Interactions from './modules/Interactives.js';
 import './style.css';
 
 const task = new Helpers();
+const utils = new Interactions();
 
 const list = document.querySelector('.list');
 const form = document.querySelector('form');
@@ -14,6 +16,7 @@ function clearInputs() {
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   task.addTask(task.taskList.length + 1, document.querySelector('.list_input').value);
+  utils.checkCompleted(task.taskList);
   clearInputs();
 });
 
@@ -29,6 +32,7 @@ list.addEventListener('click', (e) => {
 
   if (trash) {
     task.removeTask(Number(trash.id));
+    utils.checkCompleted(task.taskList);
   }
 
   if (description) {
@@ -42,5 +46,17 @@ list.addEventListener('focusout', (e) => {
     task.displayEditedTask(description, Number(description.dataset.id));
   }
 });
+
+list.addEventListener('change', (e) => {
+  const checkBox = e.target.closest('.check_item');
+  if (checkBox) {
+    utils.toggleCompleted(Number(checkBox.id), task.taskList, checkBox);
+    checkBox.nextElementSibling.classList.toggle('blur_text');
+    task.sortTasks();
+    task.updateStorage();
+  }
+});
+
+window.addEventListener('DOMContentLoaded', () => utils.checkCompleted(task.taskList));
 
 window.onload = task.displayList();
