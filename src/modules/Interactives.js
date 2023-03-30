@@ -1,22 +1,15 @@
-import Helpers from './Helpers.js';
-
-const item = new Helpers();
-
+/* eslint-disable class-methods-use-this */
 export default class Interactions {
-
   toggleCompleted(id, taskList, elem) {
     taskList.forEach((task) => {
       if (task.index === id && elem.checked === true) {
-        task.completed = true
+        task.completed = true;
         elem.dataset.id = 'true';
-        console.log(task)
       } else if (task.index === id && elem.checked === false) {
         task.completed = false;
-        elem.dataset.id = 'false'
-        console.log(task)
+        elem.dataset.id = 'false';
       }
-    })
-
+    });
   }
 
   checkCompleted(taskList) {
@@ -28,5 +21,13 @@ export default class Interactions {
         desc[i].classList.toggle('blur_text');
       }
     });
+  }
+
+  clearCompleted(elem) {
+    const newList = elem.filter((item) => item.completed === false);
+    newList.forEach((item, i) => {
+      item.index = i + 1;
+    });
+    return newList;
   }
 }
