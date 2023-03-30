@@ -44,8 +44,8 @@ export default class Helpers {
       listItems += `
       <li class='list_item'>
       <div>
-        <input type='checkbox' class='check_item' data-id=${arr[i].index}>
-        <span class='description'>${arr[i].description}</span>
+        <input type='checkbox' class='check_item'>
+        <span class='description' data-id=${arr[i].index}>${arr[i].description}</span>
       </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
       <i class="fa-solid fa-trash-can" id=${arr[i].index}></i>
@@ -57,5 +57,16 @@ export default class Helpers {
 
   sortTasks() {
     this.taskList.sort((a, b) => a.index - b.index);
+  }
+
+  editTask(desc) {
+    desc.setAttribute('contenteditable', 'true');
+    desc.focus();
+  }
+
+  displayEditedTask(elem, index) {
+    elem.setAttribute('contenteditable', 'false');
+    const objIndex = this.taskList.findIndex((obj) => obj.index === index);
+    this.taskList[objIndex].description = elem.innerText;
   }
 }
