@@ -46,7 +46,7 @@ export default class Helpers {
       listItems += `
       <li class='list_item'>
       <div>
-        <input type='checkbox' class='check_item'>
+        <input type='checkbox' class='check_item' id=${arr[i].index}>
         <span class='description' data-id=${arr[i].index}>${arr[i].description}</span>
       </div>
       <i class="fa-solid fa-ellipsis-vertical"></i>
