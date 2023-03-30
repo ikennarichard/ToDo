@@ -141,6 +141,12 @@ form button {
   color: var(--darkboro);
   font-weight: 600;
   cursor: pointer;
+  transition: background-color, color, 0.2s ease-in;
+} 
+
+.clear_completed:hover {
+  background-color: var(--daveys-gray);
+  color: var(--cultured);
 }
 
 .blur_text {
