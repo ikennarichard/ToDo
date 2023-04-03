@@ -1,5 +1,6 @@
 /* eslint-disable class-methods-use-this */
 import Task from './Task.js';
+import Drag from './Drag.js';
 
 export default class Helpers {
   constructor() {
@@ -13,7 +14,7 @@ export default class Helpers {
     this.sortTasks();
     this.updateStorage();
     this.displayList();
-    window.location.reload();
+    Drag.runDrag();
   }
 
   addToTaskList(task) {
@@ -39,7 +40,7 @@ export default class Helpers {
     this.sortTasks();
     this.updateStorage();
     this.displayList();
-    window.location.reload();
+    Drag.runDrag();
   }
 
   setListItems(arr) {
@@ -72,9 +73,9 @@ export default class Helpers {
     elem.setAttribute('contenteditable', 'false');
     const objIndex = this.taskList.findIndex((obj) => obj.index === index);
     this.taskList[objIndex].description = elem.innerText;
+    Drag.runDrag();
     this.sortTasks();
     this.updateStorage();
-    window.location.reload();
   }
 
   updateStorage() {

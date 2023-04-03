@@ -44,7 +44,7 @@ export default class Drag {
       e.preventDefault();
       const nextElem = Drag.getNextElem(container, e.clientY);
       const draggable = document.querySelector('.dragging');
-      if (nextElem === null || draggable === null) {
+      if (nextElem === undefined || draggable === null) {
         container.appendChild(draggable);
       } else {
         container.insertBefore(draggable, nextElem);
