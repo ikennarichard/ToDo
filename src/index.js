@@ -1,5 +1,6 @@
 import Helpers from './modules/Helpers.js';
 import Interactives from './modules/Interactives.js';
+import Drag from './modules/Drag.js';
 import './style.css';
 
 const task = new Helpers();
@@ -67,6 +68,9 @@ clearBtn.addEventListener('click', (e) => {
   task.displayList();
 });
 
-window.addEventListener('DOMContentLoaded', () => utils.checkCompleted(task.taskList));
+window.addEventListener('DOMContentLoaded', () => {
+  utils.checkCompleted(task.taskList);
+  Drag.runDrag();
+});
 
 window.onload = task.displayList();
