@@ -47,6 +47,7 @@ list.addEventListener('focusout', (e) => {
   if (description) {
     task.displayEditedTask(description, Number(description.dataset.id));
     task.displayList();
+    Drag.runDrag();
   }
 });
 
@@ -66,6 +67,7 @@ clearBtn.addEventListener('click', (e) => {
   task.sortTasks();
   task.updateStorage();
   task.displayList();
+  Drag.runDrag();
 });
 
 window.addEventListener('DOMContentLoaded', () => {
