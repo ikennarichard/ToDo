@@ -157,3 +157,11 @@ form button {
 .highlight {
   background-color: rgba(128, 128, 128, 0.316);
 }
+
+.fa-rotate {
+  transition: transform 0.3s ease-in;
+} 
+
+.fa-rotate:hover {
+  transform: rotate(180deg);
+}
