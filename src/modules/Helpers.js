@@ -74,6 +74,7 @@ export default class Helpers {
     this.taskList[objIndex].description = elem.innerText;
     this.sortTasks();
     this.updateStorage();
+    window.location.reload();
   }
 
   updateStorage() {
