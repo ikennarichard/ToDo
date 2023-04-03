@@ -13,6 +13,7 @@ export default class Helpers {
     this.sortTasks();
     this.updateStorage();
     this.displayList();
+    window.location.reload();
   }
 
   addToTaskList(task) {
@@ -38,19 +39,20 @@ export default class Helpers {
     this.sortTasks();
     this.updateStorage();
     this.displayList();
+    window.location.reload();
   }
 
   setListItems(arr) {
     let listItems = '';
     for (let i = 0; i < arr.length; i += 1) {
       listItems += `
-      <li class='list_item'>
+      <li class='list_item' data-id='${arr[i].index}' draggable='true'>
       <div>
         <input type='checkbox' class='check_item' id=${arr[i].index}>
         <span class='description' data-id=${arr[i].index}>${arr[i].description}</span>
       </div>
-      <i class="fa-solid fa-ellipsis-vertical"></i>
-      <i class="fa-solid fa-trash-can" id=${arr[i].index}></i>
+      <i class='fa-solid fa-ellipsis-vertical'></i>
+      <i class='fa-solid fa-trash-can' id=${arr[i].index}></i>
       </li>
       `;
     }
@@ -72,6 +74,7 @@ export default class Helpers {
     this.taskList[objIndex].description = elem.innerText;
     this.sortTasks();
     this.updateStorage();
+    window.location.reload();
   }
 
   updateStorage() {

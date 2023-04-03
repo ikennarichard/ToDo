@@ -74,6 +74,7 @@ This project is a web page that lets user list To Do tasks. Built using HTML, CS
 - **Todo Tasks section**
 - **Add and Remove Tasks**
 - **Manage tasks with local storage**
+- **Drag and Drop Tasks**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

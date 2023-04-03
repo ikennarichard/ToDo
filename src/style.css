@@ -153,3 +153,7 @@ form button {
   color: transparent;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
+
+.highlight {
+  background-color: rgba(128, 128, 128, 0.316);
+}
