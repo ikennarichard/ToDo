@@ -4,7 +4,7 @@
   "description": "This project is a web page that list To Do tasks",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ikennarichard/ToDo#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.7.3",
     "eslint": "^7.32.0",
@@ -28,6 +29,8 @@
     "eslint-plugin-import": "^2.27.5",
     "hint": "^7.1.7",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "style-loader": "^3.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
