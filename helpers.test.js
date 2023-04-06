@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import Helpers from './src/modules/Helpers.js';
-// import Interactives from './src/modules/Interactives.js';
+import Interactives from './src/modules/Interactives.js';
 
 describe('add list item', () => {
   const task = new Helpers();
@@ -31,6 +31,7 @@ describe('add list item', () => {
 
 describe('status and content updates', () => {
   const task = new Helpers();
+  const utils = new Interactives();
 
   test('editing task items', () => {
     document.body.innerHTML = '<ul class="list"></ul>';
