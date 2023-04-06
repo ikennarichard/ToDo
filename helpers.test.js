@@ -27,3 +27,6 @@ describe('add list item', () => {
     expect(list).toHaveLength(0);
   });
 });
+
+describe('status and content updates', () => {
+});
