@@ -39,4 +39,11 @@ describe('status and content updates', () => {
     task.editTaskList('Edit task', 1);
     expect(task.taskList[0].description).toBe('Edit task');
   });
+
+  test('check completed status', () => {
+    document.body.innerHTML = "<input class='check' type='checkbox' checked>";
+    const item = document.querySelector('.check');
+    utils.toggleCompleted(1, task.taskList, item);
+    expect(task.taskList[0].completed).toBe(true);
+  });
 });
