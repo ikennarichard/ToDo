@@ -15,7 +15,6 @@ describe('add list item', () => {
 
   test('Add task to DOM element', () => {
     const list = document.querySelectorAll('.list li');
-    console.log(list);
     expect(list).toHaveLength(1);
   });
 
