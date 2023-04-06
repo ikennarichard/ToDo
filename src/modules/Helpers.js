@@ -69,13 +69,17 @@ export default class Helpers {
     desc.focus();
   }
 
+  editTaskList(value, index) {
+    const objIndex = this.taskList.findIndex((obj) => obj.index === index);
+    this.taskList[objIndex].description = value;
+  }
+
   displayEditedTask(elem, index) {
     elem.setAttribute('contenteditable', 'false');
-    const objIndex = this.taskList.findIndex((obj) => obj.index === index);
-    this.taskList[objIndex].description = elem.innerText;
-    Drag.runDrag();
+    this.editTaskList(elem.innerText, index);
     this.sortTasks();
     this.updateStorage();
+    Drag.runDrag();
   }
 
   updateStorage() {
