@@ -16,12 +16,6 @@ describe('add list item', () => {
     const list = document.querySelectorAll('.list li');
     expect(list).toHaveLength(1);
   });
-});
-
-describe('delete list item', () => {
-  const task = new Helpers();
-  document.body.innerHTML = '<ul class="list"></ul>';
-  task.addTask(task.taskList.length + 1, 'Task 1');
 
   test('remove task from array', () => {
     task.removeTask(1);
