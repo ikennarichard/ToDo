@@ -47,4 +47,9 @@ describe('status and content updates', () => {
     utils.toggleCompleted(1, task.taskList, item);
     expect(task.taskList[0].completed).toBe(true);
   });
+
+  test('clear all completed', () => {
+    task.taskList = utils.clearCompleted(task.taskList);
+    expect(task.taskList).toHaveLength(0);
+  });
 });
