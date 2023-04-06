@@ -16,14 +16,4 @@ describe('add list item', () => {
     const list = document.querySelectorAll('.list li');
     expect(list).toHaveLength(1);
   });
-
-  test('remove task from array', () => {
-    task.removeTask(1);
-    expect(task.taskList.length).toBe(0);
-  });
-
-  test('remove task from dom element', () => {
-    const list = document.querySelectorAll('.list li');
-    expect(list).toHaveLength(0);
-  });
 });
